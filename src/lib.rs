@@ -5,13 +5,14 @@ pub use regex::Regex;
 ///
 /// # Usage
 /// ```rust
+/// use strmatch::strmatch;
+///
 /// #[derive(PartialEq, Eq, Debug)]
 /// enum StringType {
 ///     Phone,
 ///     Email,
 ///     Others,
 /// }
-/// use strmatch::strmatch;
 ///
 /// let email = "example@example.com";
 /// let result = strmatch!(email => {

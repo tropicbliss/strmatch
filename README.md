@@ -5,6 +5,8 @@ Conditionally match strings in Rust using regex without much boilerplate. Yes, t
 # Usage
 
 ```rs
+use strmatch::strmatch;
+
 #[derive(PartialEq, Eq, Debug)]
 enum StringType {
     Phone,
