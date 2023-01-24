@@ -8,6 +8,7 @@ license = "MIT"
 keywords = ["regex"]
 repository = "https://github.com/tropicbliss/strmatch"
 categories = ["text-processing"]
+readme = "README.md"
 
 [dependencies]
 once_cell = "1.17"
