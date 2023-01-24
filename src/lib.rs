@@ -5,6 +5,12 @@ pub use regex::Regex;
 ///
 /// # Usage
 /// ```rust
+/// #[derive(PartialEq, Eq, Debug)]
+/// enum StringType {
+///     Phone,
+///     Email,
+///     Others,
+/// }
 /// use strmatch::strmatch;
 ///
 /// let email = "example@example.com";

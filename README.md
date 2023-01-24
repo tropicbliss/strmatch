@@ -5,6 +5,13 @@ Conditionally match strings in Rust using regex without much boilerplate. Yes, t
 # Usage
 
 ```rs
+#[derive(PartialEq, Eq, Debug)]
+enum StringType {
+    Phone,
+    Email,
+    Others,
+}
+
 let email = "example@example.com";
 let result = strmatch!(email => {
     r#"(\d{4})-(\d{2})-(\d{2})"# => StringType::Phone,
