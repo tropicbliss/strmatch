@@ -1,0 +1,14 @@
+[package]
+name = "strmatch"
+version = "0.1.0"
+edition = "2021"
+authors = ["tropicbliss <tropicbliss@protonmail.com>"]
+description = "Conditionally match strings in Rust using regex without much boilerplate"
+license = "MIT"
+keywords = ["regex"]
+repository = "https://github.com/tropicbliss/strmatch"
+categories = ["text-processing"]
+
+[dependencies]
+once_cell = "1.17"
+regex = "1.7"
