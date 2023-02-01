@@ -100,6 +100,22 @@ mod tests {
     }
 
     #[test]
+    fn default_case() {
+        let result = strmatch!("v43fw" => {
+            // Phone
+            r#"(\d{4})-(\d{2})-(\d{2})"# => {
+                1 + 2
+            },
+            // Email
+            r#"^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$"# => {
+                3 + 4
+            },
+            _ => 5,
+        });
+        assert_eq!(5, result);
+    }
+
+    #[test]
     fn variables() {
         let email = "example@example.com";
         let result = strmatch!(email => {
