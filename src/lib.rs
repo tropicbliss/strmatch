@@ -47,7 +47,7 @@ macro_rules! strmatch {
                 }
             }
         )*
-        break 'strmatch ($default);
+        $default
     }};
     ($input:expr => {$($regex:literal => $result:expr),+, _ => $default:expr,}) => {
         strmatch!($input => {$($regex => $result),*, _ => $default})
